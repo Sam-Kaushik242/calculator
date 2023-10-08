@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Poppins:wght@200&family=Roboto+Slab:wght@500&family=Roboto:wght@300;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+}
+
+.calculator{
+    position: relative;
+    width: 300px;
+    padding: 23px 15px;
+    border-radius: 8px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+
+.calculator .buttons{
+    position: relative;
+    display: grid;
+
+}
+
+
+.calculator .buttons #value{
+    position: relative;
+    left: 8px;
+    grid-column: span 4;
+    margin-bottom: 12px;
+    height: 100px;
+    padding: 0 20px;
+    line-height: 100px;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 1.5em;
+    color: #3a3c2e;
+    overflow: hidden;
+    background: #ccc;
+    box-shadow: inset 0 6px 1px 0 rgba(0, 0, 0, 0.35),
+    0 5pc 5pc rgba(0, 0, 0, 0.5),
+    0 15px 25px rgba(0, 0, 0, 0.35);
+    user-select: none;
+    width: calc(100% - 16px);
+}
+
+
+.calculator .buttons #value::before{
+    content: '';
+    position: absolute;
+    inset: 5px 3px;
+    border-top: 5px solid #ccc;
+    filter: blur(2px);
+}
+
+.calculator .buttons span{
+    position: relative;
+    padding: 10px;
+    margin: 6px;
+    min-width: 40px;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bbb;
+    border: 2px solid #222;
+    border-radius: 8px;
+    background: linear-gradient(#555353, #363535);
+    box-shadow:  inset 0 6px 1px 0 rgba(0, 0, 0, 0.35),
+    0 5pc 5pc rgba(0, 0, 0, 0.5),
+    0 15px 25px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    user-select: none;
+}
+
+.calculator .buttons span::before{
+    content: '';
+    position: absolute;
+    inset: 5px 3px;
+    border-top: 5px solid #ccc;
+    filter: blur(2px);
+}
+
+.calculator .buttons span:active{
+    box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.35),
+    inset 0 15px 15px rgba(0, 0, 0, 0.5),
+    inset 0 15px 25px rgba(0, 0, 0, 0.35);
+    color: #fff;
+    text-shadow: 0 0 5px #53616e,
+    0 0 8px #46525a;
+}
+
+.calculator .buttons span#clear{
+    grid-column: span 2;
+    letter-spacing: 2px;
+    background: #405561;;
+}
